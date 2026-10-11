@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTORINA AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== شاشة تسجيل الدخول ===== -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-box">
+            <div class="logo-big">P</div>
+            <h1>PROTORINA AI</h1>
+            <p class="subtitle">ذكاء اصطناعي خاص</p>
+            <input 
+                type="text" 
+                id="username-input" 
+                placeholder="اكتب اسمك..."
+                maxlength="20"
+                autocomplete="off"
+            >
+            <button id="login-btn">ابدأ المحادثة</button>
+        </div>
+    </div>
+
+    <!-- ===== الواجهة الرئيسية ===== -->
+    <div id="app" class="app hidden">
+        
+        <!-- البانر العلوي -->
+        <header class="banner">
+            <div class="banner-right">
+                <div class="logo-small">P</div>
+                <div>
+                    <h2>PROTORINA AI</h2>
+                    <span class="status">● متصل</span>
+                </div>
+            </div>
+            <div class="banner-left">
+                <span id="user-display" class="user-name"></span>
+                <button id="logout-btn" class="icon-btn" title="خروج">⏻</button>
+            </div>
+        </header>
+
+        <!-- منطقة العمل -->
+        <div class="main">
+            
+            <!-- الشريط الجانبي -->
+            <aside class="sidebar">
+                <button id="new-chat-btn" class="new-chat-btn">
+                    ＋ محادثة جديدة
+                </button>
+                <div id="chat-list" class="chat-list">
+                    <!-- المحادثات هتظهر هنا -->
+                </div>
+            </aside>
+
+            <!-- منطقة الشات -->
+            <main class="chat-area">
+                <div id="messages" class="messages">
+                    <!-- الرسائل هتظهر هنا -->
+                    <div class="welcome">
+                        <div class="logo-welcome">P</div>
+                        <h3>أهلاً بك في PROTORINA AI</h3>
+                        <p>ابدأ محادثتك الأولى</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <textarea 
+                        id="message-input" 
+                        placeholder="اكتب رسالتك هنا..."
+                        rows="1"
+                    ></textarea>
+                    <button id="send-btn" class="send-btn" title="إرسال">
+                        ➤
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
